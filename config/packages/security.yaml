@@ -1,0 +1,30 @@
+security:
+    password_hashers:
+        App\Entity\ApplicationUser:
+            algorithm: auto
+
+    enable_authenticator_manager: true
+
+    providers:
+        delplop_user_provider:
+            entity:
+                class: App\Entity\ApplicationUser
+                property: login
+
+    firewalls:
+        main:
+            lazy: true
+            provider: delplop_user_provider
+            guard:
+                authenticators:
+                    - DelPlop\UserBundle\Security\LoginFormAuthenticator
+            logout:
+                path: logout
+            login_throttling:
+                max_attempts: 3
+            remember_me:
+                secret: '%kernel.secret%'
+                lifetime: 2592000 # 1 month in seconds
+                path: /
+                secure: true
+                samesite: strict

@@ -1,0 +1,22 @@
+parameters:
+    router.request_context.scheme: 'https'
+    asset.request_context.secure: true
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    DelPlop\UserBundle\Controller\:
+        resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Controller/'
+        tags: [ 'controller.service_arguments' ]
+
+    DelPlop\UserBundle\DataFixtures\UserFixtures:
+        tags: [ 'doctrine.fixture.orm' ]
+
+    DelPlop\UserBundle\Repository\UserRepository:
+        arguments:
+            $class: 'App\Entity\ApplicationUser'
+        tags: [ 'doctrine.repository_service' ]
+
+    DelPlop\UserBundle\Security\LoginFormAuthenticator:
