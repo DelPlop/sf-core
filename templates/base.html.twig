@@ -1,0 +1,25 @@
+{% trans_default_domain 'messages' %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>{% block title %}{{ ('general.home'|trans) }}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+            <ul>
+                <li><a class="{% if activePage is same as('home') %}active{% endif %}" href="{{ path('index') }}" title="{{ ('general.home'|trans) }}">{{ ('general.home'|trans) }}</a></li>
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <li><a class="{% if activePage is same as('user') %}active{% endif %}" href="{{ path('logout') }}" title="{{ ('user.logout'|trans) }}">{{ ('user.logout'|trans) }}</a></li>
+                {% else %}
+                    <li><a class="{% if activePage is same as('login') %}active{% endif %}" href="{{ path('login') }}" title="{{ ('user.login'|trans) }}">{{ ('user.login'|trans) }}</a></li>
+                    <li><a class="{% if activePage is same as('register') %}active{% endif %}" href="{{ path('register') }}" title="{{ ('user.register'|trans) }}">{{ ('user.register'|trans) }}</a></li>
+                {% endif %}
+            </ul>
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

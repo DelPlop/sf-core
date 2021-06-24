@@ -1,0 +1,7 @@
+App\Entity\ApplicationUser:
+    properties:
+        email:
+            - NotBlank: { message: 'form.errors.email_not_blank' }
+        plainPassword:
+            - NotBlank: { message: 'form.errors.password_not_blank' }
+            - Length: { minMessage: 'form.errors.password_min_length' }

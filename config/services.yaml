@@ -1,0 +1,28 @@
+parameters:
+    router.request_context.scheme: 'https'
+    asset.request_context.secure: true
+    mailer.sender_name: '%env(MAILER_SENDER_NAME)%'
+    mailer.sender_email: '%env(MAILER_SENDER_EMAIL)%'
+    site.url: '%env(SITE_ROOT_URL)%'
+    site.name: '%env(SITE_NAME)%'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    DelPlop\UserBundle\Controller\:
+        autowire: true
+        resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Controller/'
+        tags: [ 'controller.service_arguments' ]
+
+    DelPlop\UserBundle\Repository\:
+        resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Repository/'
+        tags: [ 'doctrine.repository_service' ]
+
+    DelPlop\UserBundle\Repository\UserRepository:
+        arguments:
+            $class: 'App\Entity\ApplicationUser'
+        tags: [ 'doctrine.repository_service' ]
+
+    DelPlop\UserBundle\Security\LoginFormAuthenticator:

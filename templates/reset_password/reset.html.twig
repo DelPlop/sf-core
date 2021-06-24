@@ -1,0 +1,21 @@
+{% extends '@DelPlopUser/base.html.twig' %}
+
+{% block title %}{{ ('user.reinit_password'|trans) }}{% endblock %}
+
+{% block body %}
+    {% block pageTitle %}
+        <h1>{{ ('user.reinit_password'|trans) }}</h1>
+    {% endblock %}
+
+    {{ form_start(resetForm, {
+        attr: {class: ''}
+    }) }}
+
+        {{ form_row(resetForm.plainPassword) }}
+    
+        <button type="submit">
+            {{ ('user.reinit'|trans) }}
+        </button>
+
+    {{ form_end(resetForm) }}
+{% endblock %}

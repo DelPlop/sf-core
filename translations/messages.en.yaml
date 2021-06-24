@@ -1,0 +1,59 @@
+general:
+    welcome: Welcome!
+    home: Home
+    by: by
+    back: Back
+    yes: yes
+    no: no
+    show: Display
+    hide: Hide
+    list_of: List of
+    next: Next
+    previous: Previous
+    ok: OK
+
+form:
+    add: Add
+    edit: Edit
+    delete: Delete
+    sort: Sort
+    login:
+        login: Login
+        email: E-mail
+        password: Password
+        password_confirm: Confirmation
+        remember: Remember me
+        password_lost: Password lost?
+
+menu:
+    close: Close
+    close_menu: Close menu
+
+user:
+    login: Log in
+    logout: Log out
+    logged_as: You are logged in as
+    register: Register
+    forgot_password: Forgot password
+    request_password_change: Request
+    reinit: Reinit
+    reinit_password: Reinit my password
+
+password_reset:
+    confirm_title: Password reset e-mail sent
+    confirm_text: "If an account matching your e-mail exists, then an e-mail was just sent to you. It contains a link you can use to reset your password.<br />This link will expire in"
+    try_again: "If you don't receive an e-mail please check your spam folder or try again."
+    mail_object: Your password reset request
+    hello_user: Hi!
+    visit_link: To reset your password, please visit the following link
+    link_will_expire: This link will expire in
+    click_here: Click here
+    signature: See you soon on <a href="%site_url%">%site_name%</a>!
+
+registration:
+    mail_object: Registration confirmation
+    mail_text: "Thank you for registering on our site.<br />Here's your login: %login%."
+
+Login: Login
+E-mail: E-mail
+Password: Password
