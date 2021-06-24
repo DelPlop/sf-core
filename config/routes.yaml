@@ -1,0 +1,16 @@
+index:
+    path: /
+    controller: DelPlop\CoreBundle\Controller\IndexController::index
+
+login:
+    path: /connexion
+    controller: DelPlop\CoreBundle\Controller\SecurityController::login
+
+logout:
+    path: /deconnexion
+    controller: DelPlop\CoreBundle\Controller\SecurityController::logout
+    methods: GET
+
+register:
+    path: /inscription
+    controller: DelPlop\CoreBundle\Controller\RegistrationController::register
