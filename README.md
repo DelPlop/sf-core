@@ -8,6 +8,6 @@ Dans le projet "enfant", configurer `composer.json` pour y ajouter :
         "url": "https://github.com/DelPlop/sf-core.git"
     }],
 ```
-puis exécuter `composer update`.
+puis exécuter `composer require delplop/corebundle <version>`.
 
 CoreBundle sera disponible en tant que vendor.
