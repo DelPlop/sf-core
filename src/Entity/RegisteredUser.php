@@ -1,8 +1,8 @@
 <?php
 
-namespace DelPlop\CoreBundle\Entity;
+namespace DelPlop\UserBundle\Entity;
 
-use DelPlop\CoreBundle\Repository\UserRepository;
+use DelPlop\UserBundle\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -15,7 +15,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  * @ORM\MappedSuperclass
  */
-class User implements UserInterface, PasswordAuthenticatedUserInterface
+class RegisteredUser implements UserInterface, PasswordAuthenticatedUserInterface
 {
     /**
      * @ORM\Id

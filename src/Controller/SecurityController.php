@@ -1,6 +1,6 @@
 <?php
 
-namespace DelPlop\CoreBundle\Controller;
+namespace DelPlop\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

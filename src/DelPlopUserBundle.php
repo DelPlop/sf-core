@@ -1,10 +1,10 @@
 <?php
 
-namespace DelPlop\CoreBundle;
+namespace DelPlop\UserBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class DelPlopCoreBundle extends Bundle
+class DelPlopUserBundle extends Bundle
 {
     public function getPath(): string
     {

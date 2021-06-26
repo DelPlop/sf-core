@@ -1,4 +1,4 @@
-# CoreBundle
+# UserBundle
 
 ## Comment s'en servir
 Dans le projet "enfant", configurer `composer.json` pour y ajouter :
@@ -10,4 +10,4 @@ Dans le projet "enfant", configurer `composer.json` pour y ajouter :
 ```
 puis exécuter `composer require delplop/corebundle <version>`.
 
-CoreBundle sera disponible en tant que vendor.
+UserBundle sera disponible en tant que vendor.

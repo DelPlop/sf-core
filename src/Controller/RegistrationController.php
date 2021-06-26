@@ -1,9 +1,9 @@
 <?php
 
-namespace DelPlop\CoreBundle\Controller;
+namespace DelPlop\UserBundle\Controller;
 
-use DelPlop\CoreBundle\Entity\User;
-use DelPlop\CoreBundle\Form\RegistrationFormType;
+use DelPlop\UserBundle\Entity\RegisteredUser;
+use DelPlop\UserBundle\Form\RegistrationFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,7 +13,7 @@ class RegistrationController extends AbstractController
 {
     public function register(Request $request, UserPasswordHasherInterface $passwordEncoder): Response
     {
-        $user = new User();
+        $user = new RegisteredUser();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
