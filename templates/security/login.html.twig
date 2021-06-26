@@ -3,40 +3,40 @@
 {% block title %}{{ ('user.login'|trans) }}{% endblock %}
 
 {% block body %}
-    <h1 class="w3-card-4 w3-padding-16">{{ ('user.login'|trans) }}</h1>
+    <h1>{{ ('user.login'|trans) }}</h1>
 
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
     {% if app.user %}
-        <div class="mb-3">
+        <div>
             {{ ('user.logged_as'|trans) }} {{ app.user.username }}, <a href="{{ path('app_logout') }}">{{ ('user.logout'|trans) }}</a>
         </div>
     {% endif %}
 
-    <form name="login_form" class="w3-left-align w3-container w3-card-4 w3-padding-16 w3-white" method="post">
-        <div class="w3-section">
+    <form name="login_form" method="post">
+        <div>
             <label class="required" for="inputLogin">{{ ('form.login.login'|trans) }}</label>
-            <input type="text" value="{{ last_username }}" name="login" id="inputLogin" class="big-field w3-input" required autofocus />
+            <input type="text" value="{{ last_username }}" name="login" id="inputLogin" required autofocus />
         </div>
 
-        <div class="w3-section">
+        <div>
             <label class="required" for="inputPassword">{{ ('form.login.password'|trans) }}</label>
-            <input type="password" name="password" id="inputPassword" class="big-field w3-input" required />
+            <input type="password" name="password" id="inputPassword" required />
         </div>
 
         <input type="hidden" name="_csrf_token"
                value="{{ csrf_token('authenticate') }}"
         />
 
-        <div class="w3-section">
+        <div>
             <label class="no-label">
-                <input type="checkbox" class="w3-check" name="_remember_me"> {{ ('form.login.remember'|trans) }}
+                <input type="checkbox" name="_remember_me"> {{ ('form.login.remember'|trans) }}
             </label>
         </div>
 
-        <button class="w3-button w3-theme" type="submit">
+        <button type="submit">
             {{ ('user.login'|trans) }}
         </button>
     </form>
