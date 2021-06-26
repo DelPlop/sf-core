@@ -11,7 +11,7 @@ class IndexController extends AbstractController
 {
     public function index(Environment $twig, Security $security): Response
     {
-        return $this->render('@DelPlopCoreBundle/index/index.html.twig', [
+        return $this->render('index/index.html.twig', [
             'activePage' => 'home'
         ]);
     }
