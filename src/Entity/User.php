@@ -11,9 +11,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 /**
- * @ORM\Entity(repositoryClass=UserRepository::class)
- * @ORM\InheritanceType("SINGLE_TABLE")
- * @ORM\DiscriminatorColumn(name="discriminator", type="string")
  * @UniqueEntity(fields={"login"}, message="There is already an account with this login")
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  * @ORM\MappedSuperclass
@@ -43,7 +40,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $roles = [];
 
     /**
-     * @var string
      * @ORM\Column(type="string")
      */
     private $password;
