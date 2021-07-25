@@ -18,7 +18,7 @@ form:
         email: E-mail
         password: Password
         password_confirm: Confirmation
-        remember: Remerber me
+        remember: Remember me
 
 menu:
     close: Close
