@@ -1,10 +1,12 @@
 index:
     path: /
     controller: DelPlop\UserBundle\Controller\IndexController::index
+    methods: GET
 
 login:
     path: /connexion
     controller: DelPlop\UserBundle\Controller\SecurityController::login
+    methods: [GET, POST]
 
 logout:
     path: /deconnexion
@@ -14,3 +16,4 @@ logout:
 register:
     path: /inscription
     controller: DelPlop\UserBundle\Controller\RegistrationController::register
+    methods: [GET, POST]
