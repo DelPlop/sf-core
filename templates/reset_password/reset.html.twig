@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ ('user.reinit_password'|trans) }}{% endblock %}
+
+{% block body %}
+    <h1>{{ ('user.reinit_password'|trans) }}</h1>
+
+    {{ form_start(resetForm, {
+        attr: {class: ''}
+    }) }}
+
+        {{ form_row(resetForm.plainPassword) }}
+    
+        <button type="submit">
+            {{ ('user.reinit'|trans) }}
+        </button>
+
+    {{ form_end(resetForm) }}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ ('user.forgot_password'|trans) }}{% endblock %}
+
+{% block body %}
+    <h1>{{ ('user.forgot_password'|trans) }}</h1>
+
+    {% for flashError in app.flashes('reset_password_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    {{ form_start(requestForm, {
+        attr: {class: ''}
+    }) }}
+
+        {{ form_row(requestForm.email) }}
+
+        <button type="submit">
+            {{ ('user.request_password_change'|trans) }}
+        </button>
+
+    {{ form_end(requestForm) }}
+{% endblock %}

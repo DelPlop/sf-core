@@ -1,0 +1,7 @@
+form:
+    errors:
+        password_not_blank: Please provide your password
+        email_not_blank: Please provide your e-mail
+        passwords_must_match: Passwords don't match
+        emails_must_match: E-mails don't match
+        password_min_length: 'Your password should be at least {{ limit }} characters'

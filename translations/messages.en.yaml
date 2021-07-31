@@ -7,6 +7,10 @@ general:
     no: no
     show: Display
     hide: Hide
+    list_of: List of
+    next: Next
+    previous: Previous
+    ok: OK
 
 form:
     add: Add
@@ -19,6 +23,7 @@ form:
         password: Password
         password_confirm: Confirmation
         remember: Remember me
+        password_lost: Password lost?
 
 menu:
     close: Close
@@ -29,6 +34,21 @@ user:
     logout: Log out
     logged_as: You are logged in as
     register: Register
+    forgot_password: Forgot password
+    request_password_change: Request
+    reinit: Reinit
+    reinit_password: Reinit my password
+
+password_reset:
+    confirm_title: Password reset e-mail sent
+    confirm_text: "If an account matching your e-mail exists, then an e-mail was just sent to you. It contains a link you can use to reset your password.<br />This link will expire in"
+    try_again: "If you don't receive an e-mail please check your spam folder or try again."
+    mail_object: Your password reset request
+    hello_user: Hi!
+    visit_link: To reset your password, please visit the following link
+    link_will_expire: This link will expire in
+    click_here: Click here
+    signature: Cheers!
 
 Login: Login
 E-mail: E-mail

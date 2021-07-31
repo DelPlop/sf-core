@@ -8,8 +8,13 @@ services:
         autoconfigure: true
 
     DelPlop\UserBundle\Controller\:
+        autowire: true
         resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Controller/'
         tags: [ 'controller.service_arguments' ]
+
+    DelPlop\UserBundle\Repository\:
+        resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Repository/'
+        tags: [ 'doctrine.repository_service' ]
 
     DelPlop\UserBundle\DataFixtures\UserFixtures:
         tags: [ 'doctrine.fixture.orm' ]

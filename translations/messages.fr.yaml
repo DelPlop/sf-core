@@ -23,6 +23,7 @@ form:
         password: Mot de passe
         password_confirm: Confirmation
         remember: Se souvenir de moi
+        password_lost: Mot de passe oublié ?
 
 menu:
     close: Fermer
@@ -33,6 +34,21 @@ user:
     logout: Déconnexion
     logged_as: Vous êtes connecté en tant que
     register: Inscription
+    forgot_password: Mot de passe oublié
+    request_password_change: Récupérer
+    reinit: Réinitialiser
+    reinit_password: Réinitialiser mon mot de passe
+
+password_reset:
+    confirm_title: E-mail envoyé
+    confirm_text: "Si un compte existe avec cet e-mail, un e-mail contenant un lien pour réinitialiser votre mot de passe vient de vous être envoyé.<br />Ce lien expirera dans"
+    try_again: "Si vous ne recevez pas l'e-mail, merci de vérifier vos spams ou de réessayer."
+    mail_object: Votre demande de réinitialisation de mot de passe
+    hello_user: Bonjour !
+    visit_link: Pour réinitialiser votre mot de passe, veuillez vous rendre sur le lien suivant
+    link_will_expire: Ce lien expirera dans
+    click_here: Cliquez ici
+    signature: A bientôt,
 
 Identifiant: Identifiant
 E-mail: E-mail
