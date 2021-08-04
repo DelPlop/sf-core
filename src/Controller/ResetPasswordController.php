@@ -2,6 +2,7 @@
 
 namespace DelPlop\UserBundle\Controller;
 
+use DelPlop\UserBundle\Entity\User;
 use DelPlop\UserBundle\Entity\UserManagerInterface;
 use DelPlop\UserBundle\Form\ChangePasswordFormType;
 use DelPlop\UserBundle\Form\ResetPasswordRequestFormType;
@@ -33,7 +34,10 @@ class ResetPasswordController extends AbstractController
      */
     private $userManager;
 
-    public function __construct(ResetPasswordHelperInterface $resetPasswordHelper, UserManagerInterface $userManager)
+    public function __construct(
+        ResetPasswordHelperInterface $resetPasswordHelper,
+        UserManagerInterface $userManager
+    )
     {
         $this->resetPasswordHelper = $resetPasswordHelper;
         $this->userManager = $userManager;
@@ -142,7 +146,10 @@ class ResetPasswordController extends AbstractController
         TranslatorInterface $translator
     ): RedirectResponse
     {
-        $user = $this->userManager->findUserBy([
+//        $user = $this->userManager->findUserBy([
+//            'email' => $emailFormData,
+//        ]);
+        $user = $this->getDoctrine()->getRepository(User::class)->findOneBy([
             'email' => $emailFormData,
         ]);
 
