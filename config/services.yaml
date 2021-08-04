@@ -16,9 +16,6 @@ services:
         resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Repository/'
         tags: [ 'doctrine.repository_service' ]
 
-    DelPlop\UserBundle\DataFixtures\UserFixtures:
-        tags: [ 'doctrine.fixture.orm' ]
-
     DelPlop\UserBundle\Repository\UserRepository:
         arguments:
             $class: 'App\Entity\ApplicationUser'
