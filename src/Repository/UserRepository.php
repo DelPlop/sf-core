@@ -2,25 +2,25 @@
 
 namespace DelPlop\UserBundle\Repository;
 
-use App\Entity\ApplicationUser;
+use DelPlop\UserBundle\Entity\User;
+use DelPlop\UserBundle\Entity\UserInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
- * @method ApplicationUser|null find($id, $lockMode = null, $lockVersion = null)
- * @method ApplicationUser|null findOneBy(array $criteria, array $orderBy = null)
- * @method ApplicationUser[]    findAll()
- * @method ApplicationUser[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method User|null find($id, $lockMode = null, $lockVersion = null)
+ * @method User|null findOneBy(array $criteria, array $orderBy = null)
+ * @method User[]    findAll()
+ * @method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class UserRepository extends ServiceEntityRepository implements PasswordUpgraderInterface
 {
     public const ITEM_PER_PAGE = 50;
 
-    public function __construct(ManagerRegistry $registry, string $class = ApplicationUser::class)
+    public function __construct(ManagerRegistry $registry, string $class = UserInterface::class)
     {
         parent::__construct($registry, $class);
     }
@@ -48,7 +48,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
      */
     public function upgradePassword(UserInterface $user, string $newEncodedPassword): void
     {
-        if (!$user instanceof ApplicationUser) {
+        if (!$user instanceof UserInterface) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', \get_class($user)));
         }
 

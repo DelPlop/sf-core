@@ -1,6 +1,6 @@
 security:
     password_hashers:
-        App\Entity\ApplicationUser:
+        DelPlop\UserBundle\Entity\User:
             algorithm: auto
 
     enable_authenticator_manager: true
@@ -8,7 +8,7 @@ security:
     providers:
         delplop_user_provider:
             entity:
-                class: App\Entity\ApplicationUser
+                class: DelPlop\UserBundle\Entity\User
                 property: login
 
     firewalls:

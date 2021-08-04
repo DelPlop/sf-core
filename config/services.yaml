@@ -12,6 +12,16 @@ services:
         resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Controller/'
         tags: [ 'controller.service_arguments' ]
 
+    DelPlop\UserBundle\Controller\RegistrationController:
+        arguments:
+            $userManager: '@delplop.user_manager'
+        tags: [ 'controller.service_arguments' ]
+
+    DelPlop\UserBundle\Controller\ResetPasswordController:
+        arguments:
+            $userManager: '@delplop.user_manager'
+        tags: [ 'controller.service_arguments' ]
+
     DelPlop\UserBundle\Repository\:
         resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Repository/'
         tags: [ 'doctrine.repository_service' ]
@@ -21,7 +31,15 @@ services:
 
     DelPlop\UserBundle\Repository\UserRepository:
         arguments:
-            $class: 'App\Entity\ApplicationUser'
+            $class: 'DelPlop\UserBundle\Entity\User'
         tags: [ 'doctrine.repository_service' ]
 
     DelPlop\UserBundle\Security\LoginFormAuthenticator:
+
+    DelPlop\UserBundle\Entity\UserManager:
+        arguments:
+            $userRepository: '@DelPlop\UserBundle\Repository\UserRepository'
+        tags: [ 'controller.service_arguments' ]
+
+    delplop.user_manager:
+        alias: DelPlop\UserBundle\Entity\UserManager

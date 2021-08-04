@@ -2,7 +2,7 @@
 
 namespace DelPlop\UserBundle\Controller;
 
-use App\Entity\ApplicationUser;
+use DelPlop\UserBundle\Entity\UserManagerInterface;
 use DelPlop\UserBundle\Form\ChangePasswordFormType;
 use DelPlop\UserBundle\Form\ResetPasswordRequestFormType;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
@@ -28,9 +28,15 @@ class ResetPasswordController extends AbstractController
      */
     private $resetPasswordHelper;
 
-    public function __construct(ResetPasswordHelperInterface $resetPasswordHelper)
+    /**
+     * @var UserManagerInterface
+     */
+    private $userManager;
+
+    public function __construct(ResetPasswordHelperInterface $resetPasswordHelper, UserManagerInterface $userManager)
     {
         $this->resetPasswordHelper = $resetPasswordHelper;
+        $this->userManager = $userManager;
     }
 
     /**
@@ -136,7 +142,7 @@ class ResetPasswordController extends AbstractController
         TranslatorInterface $translator
     ): RedirectResponse
     {
-        $user = $this->getDoctrine()->getRepository(ApplicationUser::class)->findOneBy([
+        $user = $this->userManager->findUserBy([
             'email' => $emailFormData,
         ]);
 

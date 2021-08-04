@@ -2,7 +2,7 @@
 
 namespace DelPlop\UserBundle\Form;
 
-use App\Entity\ApplicationUser;
+use DelPlop\UserBundle\Entity\UserInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -63,7 +63,7 @@ class RegistrationFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => ApplicationUser::class,
+            'data_class' => UserInterface::class,
         ]);
     }
 }
