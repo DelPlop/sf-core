@@ -7,24 +7,36 @@ use Doctrine\ORM\Mapping as ORM;
 trait UserTrait
 {
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $login;
+    protected $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
-    private $email;
+    protected $login;
+
+    /**
+     * @ORM\Column(type="string", length=180, unique=true)
+     */
+    protected $email;
 
     /**
      * @ORM\Column(type="json")
      */
-    private $roles = [];
+    protected $roles = [];
 
     /**
      * @ORM\Column(type="string")
      */
-    private $password;
+    protected $password;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
     public function getLogin(): string
     {
