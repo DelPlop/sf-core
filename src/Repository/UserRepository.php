@@ -2,7 +2,7 @@
 
 namespace DelPlop\UserBundle\Repository;
 
-use DelPlop\UserBundle\Entity\User;
+use DelPlop\UserBundle\Entity\RegisteredUser;
 use DelPlop\UserBundle\Entity\UserInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -11,10 +11,10 @@ use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
- * @method User|null find($id, $lockMode = null, $lockVersion = null)
- * @method User|null findOneBy(array $criteria, array $orderBy = null)
- * @method User[]    findAll()
- * @method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method RegisteredUser|null find($id, $lockMode = null, $lockVersion = null)
+ * @method RegisteredUser|null findOneBy(array $criteria, array $orderBy = null)
+ * @method RegisteredUser[]    findAll()
+ * @method RegisteredUser[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class UserRepository extends ServiceEntityRepository implements PasswordUpgraderInterface
 {

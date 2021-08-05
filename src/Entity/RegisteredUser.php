@@ -18,7 +18,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  * @ORM\MappedSuperclass()
  */
-class User implements UserInterface, PasswordAuthenticatedUserInterface
+class RegisteredUser implements UserInterface, PasswordAuthenticatedUserInterface
 {
     use UserTrait;
 }

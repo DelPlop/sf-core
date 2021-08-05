@@ -27,7 +27,7 @@ class UserManager implements UserManagerInterface
 
     public function getClass(): string
     {
-        return User::class;
+        return RegisteredUser::class;
     }
 
     public function findUserBy(array $criteria): UserInterface
