@@ -13,7 +13,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @ORM\Table(name="user")
+ * @ORM\Table(name="registered_user")
  * @UniqueEntity(fields={"login"}, message="There is already an account with this login")
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  * @ORM\MappedSuperclass()

@@ -28,7 +28,7 @@ services:
 
     DelPlop\UserBundle\Repository\UserRepository:
         arguments:
-            $class: 'DelPlop\UserBundle\Entity\User'
+            $class: 'DelPlop\UserBundle\Entity\RegisteredUser'
         tags: [ 'doctrine.repository_service' ]
 
     DelPlop\UserBundle\Security\LoginFormAuthenticator:

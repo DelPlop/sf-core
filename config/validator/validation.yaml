@@ -1,4 +1,4 @@
-App\Entity\ApplicationUser:
+DelPlop\UserBundle\Entity\RegisteredUser:
     properties:
         email:
             - NotBlank: { message: 'form.errors.email_not_blank' }
