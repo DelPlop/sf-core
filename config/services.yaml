@@ -17,6 +17,7 @@ services:
         tags: [ 'controller.service_arguments' ]
 
     DelPlop\UserBundle\Repository\:
+        autowire: true
         resource: '%kernel.project_dir%/vendor/delplop/userbundle/src/Repository/'
         tags: [ 'doctrine.repository_service' ]
 
