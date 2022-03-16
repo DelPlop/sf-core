@@ -9,16 +9,16 @@
     }],
     "license": "GPL-3.0-or-later",
     "require": {
-        "php": ">=8.0",
-        "doctrine/doctrine-bundle": "^2.4",
-        "doctrine/orm": "^2.9",
-        "symfony/rate-limiter": "5.3.*",
-        "symfony/security-bundle": "5.3.*",
-        "symfony/yaml": "5.3.*",
-        "symfony/twig-bundle": "^5.3",
-        "symfonycasts/reset-password-bundle": "^1.9",
-        "symfony/mailjet-mailer": "^5.3",
-        "symfony/translation": "^5.3"
+        "php": ">=8.0.2",
+        "doctrine/doctrine-bundle": "^2.5",
+        "doctrine/orm": "^2.11",
+        "symfony/rate-limiter": "6.0.*",
+        "symfony/security-bundle": "6.0.*",
+        "symfony/yaml": "6.0.*",
+        "symfony/twig-bundle": "^6.0",
+        "symfonycasts/reset-password-bundle": "^1.13",
+        "symfony/mailjet-mailer": "^6.0",
+        "symfony/translation": "^6.0"
     },
     "autoload": {
         "psr-4": {
