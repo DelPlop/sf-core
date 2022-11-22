@@ -1,13 +1,15 @@
 # UserBundle
 
-## Comment s'en servir
-Dans le projet "enfant", configurer `composer.json` pour y ajouter :
+## Installation
+Ajouter (ou modifier)
 ```
-    "repositories" : [{
-        "type": "vcs",
-        "url": "https://github.com/DelPlop/sf-core.git"
-    }],
+    "repositories": {
+        "user-bundle": {
+            "type": "vcs",
+            "url": "git@github.com:DelPlop/sf-user-bundle.git"
+        }
+    },
 ```
-puis exécuter `composer require delplop/userbundle dev-master`.
+dans `composer.json` de votre projet puis exécuter `composer require delplop/userbundle`.
 
 UserBundle sera disponible en tant que vendor.
