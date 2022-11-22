@@ -9,7 +9,7 @@
     }],
     "license": "GPL-3.0-or-later",
     "require": {
-        "php": ">=8.0.2",
+        "php": ">=8.1",
         "doctrine/doctrine-bundle": "^2.5",
         "doctrine/orm": "^2.11",
         "symfony/rate-limiter": "6.0.*",
