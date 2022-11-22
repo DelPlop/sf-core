@@ -15,10 +15,10 @@
         "symfony/rate-limiter": "6.0.*",
         "symfony/security-bundle": "6.0.*",
         "symfony/yaml": "6.0.*",
-        "symfony/twig-bundle": "^6.0",
+        "symfony/twig-bundle": "6.0.*",
         "symfonycasts/reset-password-bundle": "^1.13",
-        "symfony/mailjet-mailer": "^6.0",
-        "symfony/translation": "^6.0"
+        "symfony/mailjet-mailer": "6.0.*",
+        "symfony/translation": "6.0.*"
     },
     "autoload": {
         "psr-4": {
