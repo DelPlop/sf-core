@@ -4,7 +4,7 @@
 Ajouter (ou modifier)
 ```
     "repositories": {
-        "db-bundle": {
+        "user-bundle": {
             "type": "vcs",
             "url": "git@github.com:DelPlop/sf-user-bundle.git"
         }
